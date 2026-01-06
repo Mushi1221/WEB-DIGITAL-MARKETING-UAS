@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Cara seduh V60 biar nggak asem — KopiKita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__wrap">
+      <div class="brand">
+        <div class="brand__logo">☕</div>
+        <div class="brand__text"><strong>KopiKita</strong><span>Single Post</span></div>
+      </div>
+
+      <form class="search" data-search-form data-search-target="blog.html">
+        <input data-search-input type="search" placeholder="Cari artikel…" />
+        <button type="submit">Cari</button>
+      </form>
+
+      <nav class="nav">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="products.html">Produk</a>
+        <a data-nav href="blog.html">Blog</a>
+        <a data-nav href="about.html">Tentang</a>
+        <a data-nav href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="pagehead">
+      <h1>Cara seduh V60 biar nggak asem</h1>
+      <p class="meta"><span class="tag">Brew Guide</span><span>Jan 2026</span><span>5 menit</span></p>
+    </section>
+
+    <section class="layout">
+      <main class="main">
+        <div class="card">
+          <div class="thumb" style="height:220px"></div>
+          <div class="hr"></div>
+          <p class="muted">
+            Banyak yang bilang V60 “asem”. Padahal biasanya masalahnya di grind size, suhu, dan teknik pouring.
+            Ini checklist cepat:
+          </p>
+          <ul class="muted">
+            <li><strong>Grind:</strong> medium (mirip gula pasir).</li>
+            <li><strong>Rasio:</strong> 15g kopi : 250g air.</li>
+            <li><strong>Suhu:</strong> 90–94°C (jangan terlalu dingin).</li>
+            <li><strong>Bloom:</strong> 30–45 detik (2x berat kopi).</li>
+            <li><strong>Total waktu:</strong> 2:30–3:15 menit.</li>
+          </ul>
+          <p class="muted">
+            Kalau masih asem, coba: grind sedikit lebih halus atau naikkan suhu 1–2°C.
+          </p>
+
+          <div class="hr"></div>
+
+          <div class="grid2">
+            <div class="card">
+              <p class="itemtitle">Rekomendasi kopi untuk V60</p>
+              <p class="muted">Kintamani (citrus clean) atau Gayo Honey (manis floral).</p>
+              <a class="btn btn--ghost" href="products.html">Lihat Produk</a>
+            </div>
+            <div class="card">
+              <p class="itemtitle">CTA</p>
+              <p class="muted">Mau dibantu pilih gilingan? Chat WA aja.</p>
+              <a class="btn" href="contact.html">Chat WA</a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="h3">Artikel terkait</h3>
+          <ul>
+            <li><a href="post.html">Fresh roast itu ngaruh apa?</a></li>
+            <li><a href="post.html">Bedanya medium vs dark roast</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3 class="h3">Langganan info promo</h3>
+          <form onsubmit="return subFake(event)">
+            <label>Email
+              <input required type="email" placeholder="nama@email.com">
+            </label>
+            <button class="btn" type="submit" style="margin-top:8px">Subscribe</button>
+            <p class="note" id="subNote"></p>
+          </form>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div><strong>KopiKita</strong><div class="muted">Single post</div></div>
+      <div class="footer__links">
+        <a href="blog.html">Blog</a><a href="products.html">Produk</a><a href="contact.html">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    function subFake(e){
+      e.preventDefault();
+      document.getElementById("subNote").textContent = "✅ Subscribe berhasil (simulasi).";
+      return false;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>House Blend — KopiKita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__wrap">
+      <div class="brand">
+        <div class="brand__logo">☕</div>
+        <div class="brand__text"><strong>KopiKita</strong><span>Produk</span></div>
+      </div>
+
+      <form class="search" data-search-form data-search-target="blog.html">
+        <input data-search-input type="search" placeholder="Cari artikel… (mis: espresso)" />
+        <button type="submit">Cari</button>
+      </form>
+
+      <nav class="nav">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="products.html">Produk</a>
+        <a data-nav href="blog.html">Blog</a>
+        <a data-nav href="about.html">Tentang</a>
+        <a data-nav href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="pagehead">
+      <h1>House Blend 250gr</h1>
+      <p>Blend paling aman untuk espresso + susu. Notes cokelat & kacang, body tebal, aftertaste manis.</p>
+    </section>
+
+    <section class="layout">
+      <main class="main">
+        <div class="grid2">
+          <div class="card">
+            <div class="thumb" style="height:240px"></div>
+          </div>
+          <div class="card">
+            <div class="meta">
+              <span class="tag">Blend</span><span class="tag">Medium-dark</span><span class="tag">Best Seller</span>
+            </div>
+            <h2 class="h2" style="margin-top:10px">Rp 49.000</h2>
+            <p class="muted">Pilih gilingan sesuai alat seduh kamu.</p>
+
+            <div class="hr"></div>
+
+            <form onsubmit="return makeOrder(event)">
+              <label>Nama
+                <input required id="nama" placeholder="Nama kamu" />
+              </label>
+              <label>WhatsApp
+                <input required id="wa" placeholder="08xxxxxxxxxx" />
+              </label>
+              <label>Gilingan
+                <select required id="grind">
+                  <option value="">Pilih</option>
+                  <option>Beans (biji)</option>
+                  <option>Espresso</option>
+                  <option>Mokapot</option>
+                  <option>V60 / Pour Over</option>
+                  <option>French Press</option>
+                  <option>Tubruk</option>
+                </select>
+              </label>
+              <label>Catatan (opsional)
+                <textarea id="note" rows="3" placeholder="Mis: minta roast terbaru…"></textarea>
+              </label>
+
+              <button class="btn" type="submit">Order via WhatsApp</button>
+              <p class="note" id="noteMsg"></p>
+              <a class="btn btn--ghost" id="waLink" href="#" style="display:none;margin-top:8px">Buka WhatsApp (Simulasi)</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h3 class="h3">Deskripsi</h3>
+        <p class="muted">House Blend dibuat untuk kamu yang suka kopi “nendang” tapi tetap smooth. Cocok untuk latte/cappuccino, juga enak diminum hitam.</p>
+
+        <div class="hr"></div>
+
+        <h3 class="h3">Spesifikasi</h3>
+        <div class="grid3">
+          <div class="card"><p class="itemtitle">Berat</p><p class="muted">250 gram</p></div>
+          <div class="card"><p class="itemtitle">Roast</p><p class="muted">Medium-dark</p></div>
+          <div class="card"><p class="itemtitle">Notes</p><p class="muted">Cokelat, kacang</p></div>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="h3">Rekomendasi pairing</h3>
+          <ul>
+            <li>Latte / cappuccino</li>
+            <li>Roti bakar, cookies</li>
+            <li>Ngopi sore</li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3 class="h3">Produk terkait</h3>
+          <div class="card">
+            <p class="itemtitle">Gayo Honey</p>
+            <p class="muted">Manis & floral.</p>
+            <a class="btn btn--ghost" href="products.html">Lihat</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div><strong>KopiKita</strong><div class="muted">Single product</div></div>
+      <div class="footer__links">
+        <a href="products.html">Produk</a><a href="blog.html">Blog</a><a href="contact.html">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    function makeOrder(e){
+      e.preventDefault();
+      const nama = document.getElementById("nama").value.trim();
+      const wa = document.getElementById("wa").value.trim();
+      const grind = document.getElementById("grind").value;
+      const note = document.getElementById("note").value.trim();
+      const noteText = note ? `Catatan: ${note}` : `Catatan: -`;
+
+      const msg =
+`Halo KopiKita! Saya ${nama}.
+Saya mau order: House Blend 250gr
+Gilingan: ${grind}
+No WA: ${wa}
+${noteText}`;
+
+      const waNumber = "6281234567890"; // ganti jika perlu
+      const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById("noteMsg").textContent = "✅ Pesanan dibuat. Klik tombol 'Buka WhatsApp (Simulasi)'.";
+      const link = document.getElementById("waLink");
+      link.style.display = "inline-flex";
+      link.href = url;
+      return false;
+    }
+  </script>
+</body>
+</html>

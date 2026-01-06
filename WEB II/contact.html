@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Kontak — KopiKita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__wrap">
+      <div class="brand"><div class="brand__logo">☕</div><div class="brand__text"><strong>KopiKita</strong><span>Kontak</span></div></div>
+      <form class="search" data-search-form data-search-target="blog.html">
+        <input data-search-input type="search" placeholder="Cari artikel…" /><button type="submit">Cari</button>
+      </form>
+      <nav class="nav">
+        <a data-nav href="index.html">Home</a><a data-nav href="products.html">Produk</a><a data-nav href="blog.html">Blog</a>
+        <a data-nav href="about.html">Tentang</a><a data-nav href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="pagehead">
+      <h1>Kontak & Order</h1>
+      <p>Isi form untuk simulasi lead / checkout. Atau klik tombol WA.</p>
+    </section>
+
+    <section class="layout">
+      <main class="main">
+        <div class="card">
+          <h2 class="h2">Form Order (Simulasi)</h2>
+          <form onsubmit="return makeOrder(event)">
+            <label>Nama
+              <input required id="nama" placeholder="Nama kamu" />
+            </label>
+            <label>WhatsApp
+              <input required id="wa" placeholder="08xxxxxxxxxx" />
+            </label>
+            <label>Pilih produk
+              <select required id="produk">
+                <option value="">Pilih</option>
+                <option>House Blend 250gr</option>
+                <option>Gayo Honey 250gr</option>
+                <option>Kintamani 250gr</option>
+                <option>Paket Ngopi Santai (2 pack)</option>
+                <option>Paket Anak Kantor (3 pack)</option>
+              </select>
+            </label>
+            <label>Gilingan
+              <select required id="grind">
+                <option value="">Pilih</option>
+                <option>Beans (biji)</option>
+                <option>Espresso</option>
+                <option>Mokapot</option>
+                <option>V60 / Pour Over</option>
+                <option>French Press</option>
+                <option>Tubruk</option>
+              </select>
+            </label>
+            <label>Catatan (opsional)
+              <textarea id="note" rows="3" placeholder="Mis: kirim hari ini…"></textarea>
+            </label>
+
+            <button class="btn" type="submit">Buat Pesanan</button>
+            <p class="note" id="noteMsg"></p>
+            <a class="btn btn--ghost" id="waLink" href="#" style="display:none;margin-top:10px">Buka WhatsApp (Simulasi)</a>
+          </form>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="h3">Kontak</h3>
+          <p class="muted"><strong>WA:</strong> +62 812-3456-7890<br><strong>IG:</strong> @kopikita.id</p>
+          <a class="btn" href="products.html">Lihat Produk</a>
+        </div>
+        <div class="widget">
+          <h3 class="h3">Jam operasional</h3>
+          <ul>
+            <li>Senin–Sabtu: 09.00–18.00</li>
+            <li>Minggu: off</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div><strong>KopiKita</strong><div class="muted">Page: Kontak</div></div>
+      <div class="footer__links"><a href="index.html">Home</a><a href="blog.html">Blog</a></div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    function makeOrder(e){
+      e.preventDefault();
+      const nama = document.getElementById("nama").value.trim();
+      const wa = document.getElementById("wa").value.trim();
+      const produk = document.getElementById("produk").value;
+      const grind = document.getElementById("grind").value;
+      const note = document.getElementById("note").value.trim();
+      const noteText = note ? `Catatan: ${note}` : `Catatan: -`;
+
+      const msg =
+`Halo KopiKita! Saya ${nama}.
+Saya mau order: ${produk}
+Gilingan: ${grind}
+No WA: ${wa}
+${noteText}`;
+
+      const waNumber = "6281234567890"; // ganti jika perlu
+      const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById("noteMsg").textContent = "✅ Pesanan dibuat. Klik tombol WhatsApp.";
+      const link = document.getElementById("waLink");
+      link.style.display = "inline-flex";
+      link.href = url;
+      return false;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Produk — KopiKita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__wrap">
+      <div class="brand">
+        <div class="brand__logo">☕</div>
+        <div class="brand__text"><strong>KopiKita</strong><span>Produk</span></div>
+      </div>
+
+      <form class="search" data-search-form data-search-target="products.html">
+        <input data-search-input type="search" placeholder="Cari produk… (mis: blend, gayo)" />
+        <button type="submit">Cari</button>
+      </form>
+
+      <nav class="nav">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="products.html">Produk</a>
+        <a data-nav href="blog.html">Blog</a>
+        <a data-nav href="about.html">Tentang</a>
+        <a data-nav href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="pagehead">
+      <h1>Produk KopiKita</h1>
+      <p>Single origin & house blend. Bisa pilih: beans atau bubuk (espresso / V60 / french press / tubruk).</p>
+    </section>
+
+    <section class="layout">
+      <main class="main">
+        <div class="grid3">
+          <article class="card" data-searchable>
+            <div class="thumb small"></div>
+            <div class="meta"><span class="tag">Single Origin</span><span>250gr</span></div>
+            <p class="itemtitle">Gayo Honey</p>
+            <p class="muted">Notes madu, cokelat, floral.</p>
+            <p class="price">Rp 55.000</p>
+            <a class="btn btn--ghost" href="product.html">Detail</a>
+          </article>
+
+          <article class="card" data-searchable>
+            <div class="thumb small"></div>
+            <div class="meta"><span class="tag">Blend</span><span>250gr</span></div>
+            <p class="itemtitle">House Blend</p>
+            <p class="muted">Cocok espresso & latte.</p>
+            <p class="price">Rp 49.000</p>
+            <a class="btn btn--ghost" href="product.html">Detail</a>
+          </article>
+
+          <article class="card" data-searchable>
+            <div class="thumb small"></div>
+            <div class="meta"><span class="tag">Single Origin</span><span>250gr</span></div>
+            <p class="itemtitle">Kintamani</p>
+            <p class="muted">Citrus, fruity, clean.</p>
+            <p class="price">Rp 57.000</p>
+            <a class="btn btn--ghost" href="product.html">Detail</a>
+          </article>
+        </div>
+
+        <p class="muted" data-empty style="display:none; margin-top:12px">
+          Tidak ada produk yang cocok dengan pencarian kamu.
+        </p>
+      </main>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="h3">Filter cepat</h3>
+          <ul>
+            <li><a href="products.html?q=single">Single Origin</a></li>
+            <li><a href="products.html?q=blend">Blend</a></li>
+            <li><a href="products.html?q=250gr">250gr</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3 class="h3">Butuh rekomendasi?</h3>
+          <p class="muted">Mau buat kopi susu → House Blend. Mau pour over ringan → Kintamani.</p>
+          <a class="btn" href="contact.html">Chat WA</a>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div><strong>KopiKita</strong><div class="muted">Produk</div></div>
+      <div class="footer__links">
+        <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="contact.html">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
