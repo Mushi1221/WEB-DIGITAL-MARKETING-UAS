@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Blog — KopiKita</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__wrap">
+      <div class="brand">
+        <div class="brand__logo">☕</div>
+        <div class="brand__text"><strong>KopiKita</strong><span>Blog</span></div>
+      </div>
+
+      <form class="search" data-search-form data-search-target="blog.html">
+        <input data-search-input type="search" placeholder="Cari artikel… (mis: v60, espresso)" />
+        <button type="submit">Cari</button>
+      </form>
+
+      <nav class="nav">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="products.html">Produk</a>
+        <a data-nav href="blog.html">Blog</a>
+        <a data-nav href="about.html">Tentang</a>
+        <a data-nav href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="pagehead">
+      <h1>Blog KopiKita</h1>
+      <p>Konten SEO untuk edukasi + meningkatkan traffic organik. <span data-query-label></span></p>
+    </section>
+
+    <section class="layout">
+      <main class="main">
+        <article class="card" data-searchable>
+          <div class="meta"><span class="tag">Brew Guide</span><span>Jan 2026</span><span>5 menit</span></div>
+          <h3 class="h3">Cara seduh V60 biar nggak asem</h3>
+          <p class="muted">Atur grind size, rasio, dan suhu air. Ini panduan singkat untuk pemula.</p>
+          <a class="btn btn--ghost" href="post.html">Baca →</a>
+        </article>
+
+        <article class="card" data-searchable>
+          <div class="meta"><span class="tag">Espresso</span><span>Jan 2026</span><span>4 menit</span></div>
+          <h3 class="h3">Bedanya medium vs dark roast</h3>
+          <p class="muted">Biar kamu nggak salah pilih roast untuk latte atau pour over.</p>
+          <a class="btn btn--ghost" href="post.html">Baca →</a>
+        </article>
+
+        <article class="card" data-searchable>
+          <div class="meta"><span class="tag">Roasting</span><span>Jan 2026</span><span>3 menit</span></div>
+          <h3 class="h3">Fresh roast itu ngaruh apa?</h3>
+          <p class="muted">Kenapa roast date penting untuk rasa dan aroma kopi kamu.</p>
+          <a class="btn btn--ghost" href="post.html">Baca →</a>
+        </article>
+
+        <p class="muted" data-empty style="display:none; margin-top:12px">
+          Tidak ada artikel yang cocok dengan pencarian kamu.
+        </p>
+      </main>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="h3">Kategori</h3>
+          <ul>
+            <li><a href="blog.html?q=brew">Brew Guide</a></li>
+            <li><a href="blog.html?q=espresso">Espresso</a></li>
+            <li><a href="blog.html?q=roast">Roasting</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3 class="h3">Artikel populer</h3>
+          <ul>
+            <li><a href="post.html">V60 anti asem</a></li>
+            <li><a href="post.html">Roast level untuk latte</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3 class="h3">CTA</h3>
+          <p class="muted">Selesai baca? Coba kopi best seller kita.</p>
+          <a class="btn" href="products.html">Ke Produk</a>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div><strong>KopiKita</strong><div class="muted">Blog</div></div>
+      <div class="footer__links">
+        <a href="index.html">Home</a><a href="products.html">Produk</a><a href="contact.html">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

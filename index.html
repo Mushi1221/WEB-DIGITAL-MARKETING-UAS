@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>KopiKita — UMKM Kopi Lokal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__wrap">
+      <div class="brand">
+        <div class="brand__logo">☕</div>
+        <div class="brand__text">
+          <strong>KopiKita</strong>
+        </div>
+      </div>
+
+      <form class="search" data-search-form data-search-target="blog.html">
+        <input data-search-input type="search" placeholder="Cari artikel… (mis: v60, espresso)" />
+        <button type="submit">Cari</button>
+      </form>
+
+      <nav class="nav">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="products.html">Produk</a>
+        <a data-nav href="blog.html">Blog</a>
+        <a data-nav href="about.html">Tentang</a>
+        <a data-nav href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="pagehead">
+      <h1>Kopi Lokal, Rasa Juara.</h1>
+      <p>Fresh roast, biji pilihan Nusantara, bisa request gilingan. Website ini dibuat dengan layout ala WordPress: halaman, blog, sidebar widget, dan single post.</p>
+    </section>
+
+    <section class="layout">
+      <main class="main">
+        <section class="hero">
+          <div class="hero__grid">
+            <div>
+              <h2 class="h2">Promo Minggu Ini</h2>
+              <p class="muted">Paket bundling = strategi digital marketing paling gampang buat naikin AOV (Average Order Value).</p>
+              <div class="kpi" style="margin-top:10px">
+                <div class="k"><strong>Fresh</strong><span>Roast 1–3 hari</span></div>
+                <div class="k"><strong>Gratis Ongkir</strong><span>Min. 2 pack*</span></div>
+                <div class="k"><strong>4.9/5</strong><span>Review pelanggan</span></div>
+              </div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+                <a class="btn" href="products.html">Lihat Produk</a>
+                <a class="btn btn--ghost" href="contact.html">Order via WA</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="thumb">
+                <img src="images/house.jpg" alt="House Blend">
+              </div>
+              <div class="hr"></div>
+              <p class="itemtitle">Best Seller: House Blend (250gr)</p>
+              <p class="muted">Notes cokelat & kacang, cocok buat espresso + susu.</p>
+              <p class="price">Rp 49.000</p>
+              <a class="btn btn--ghost" href="product.html">Buka Produk →</a>
+            </div>
+          </div>
+        </section>
+
+        <div class="hr"></div>
+
+        <h2 class="h2">Produk Pilihan</h2>
+        <div class="grid3">
+          <article class="card">
+            <div class="thumb small">
+              <img src="images/gayo.jpg" alt="Gayo Honey">
+            </div>
+            <p class="itemtitle">Gayo Honey</p>
+            <p class="muted">Notes madu & floral.</p>
+            <p class="price">Rp 55.000</p>
+            <a class="btn btn--ghost" href="product.html">Detail</a>
+          </article>
+          <article class="card">
+            <div class="thumb small">
+              <img src="images/house.jpg" alt="House Blend">
+            </div>
+            <p class="itemtitle">House Blend</p>
+            <p class="muted">Espresso friendly.</p>
+            <p class="price">Rp 49.000</p>
+            <a class="btn btn--ghost" href="product.html">Detail</a>
+          </article>
+          <article class="card">
+            <div class="thumb small">
+              <img src="images/kintamani.jpg" alt="Kintamani">
+            </div>
+            <p class="itemtitle">Kintamani</p>
+            <p class="muted">Citrus & fruity.</p>
+            <p class="price">Rp 57.000</p>
+            <a class="btn btn--ghost" href="product.html">Detail</a>
+          </article>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2 class="h2">Artikel Terbaru</h2>
+        <article class="card">
+          <div class="meta"><span class="tag">Brew Guide</span><span>5 menit</span><span>Jan 2026</span></div>
+          <h3 class="h3">Cara seduh V60 biar nggak asem</h3>
+          <p class="muted">Atur grind size, rasio, dan suhu air. Ini panduan singkat untuk pemula.</p>
+          <a class="btn btn--ghost" href="post.html">Baca →</a>
+        </article>
+
+        <article class="card">
+          <div class="meta"><span class="tag">Espresso</span><span>4 menit</span><span>Jan 2026</span></div>
+          <h3 class="h3">Bedanya medium vs dark roast</h3>
+          <p class="muted">Biar kamu nggak salah pilih roast untuk latte atau pour over.</p>
+          <a class="btn btn--ghost" href="post.html">Baca →</a>
+        </article>
+      </main>
+
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="h3">Order Cepat</h3>
+          <p class="muted">Klik untuk pesan via WhatsApp (simulasi).</p>
+          <a class="btn" href="contact.html">Order via WA</a>
+        </div>
+
+        <div class="widget">
+          <h3 class="h3">Kategori</h3>
+          <ul>
+            <li><a href="blog.html?q=v60">Brew Guide</a></li>
+            <li><a href="blog.html?q=espresso">Espresso</a></li>
+            <li><a href="blog.html?q=roast">Roasting</a></li>
+          </ul>
+        </div>
+
+        <div class="widget">
+          <h3 class="h3">Best Seller</h3>
+          <div class="card">
+            <p class="itemtitle">House Blend 250gr</p>
+            <p class="muted">Paling aman buat kopi susu.</p>
+            <a class="btn btn--ghost" href="product.html">Lihat</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div>
+        <strong>KopiKita</strong>
+      </div>
+      <div class="footer__links">
+        <a href="products.html">Produk</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">Tentang</a>
+        <a href="contact.html">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
